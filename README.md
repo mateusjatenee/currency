@@ -44,6 +44,8 @@ $brl = $currency->from('USD')->to('EUR')->to('BRL')->get(); // from USD to EUR t
 $euros = $currency->from('USD')->to('EUR');
 $brl = $euros->to('BRL')->get();
 
+?>
+
 ```
 
 #### Changelog
