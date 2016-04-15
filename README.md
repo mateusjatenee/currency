@@ -29,7 +29,22 @@ var_dump($euros);
 
 ```
 
+You can also use the `to` method multiple times, in a chainable way. Something like:  
 
+```php 
+
+<?php
+
+use Mateusjatenee\Currency;
+
+$currency = new Currency(10);
+
+$brl = $currency->from('USD')->to('EUR')->to('BRL')->get(); // from USD to EUR then to BRL.
+// or
+$euros = $currency->from('USD')->to('EUR');
+$brl = $euros->to('BRL')->get();
+
+```
 
 #### Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information.
