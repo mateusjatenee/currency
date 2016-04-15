@@ -1,6 +1,6 @@
 {
     "name": "mateusjatenee/currency",
-    "description": "PHP project.",
+    "description": "Simple lib that provides currency conversion using Yahoo! webservices.",
     "keywords": [],
     "license": "MIT",
     "authors": [
@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0.2"
+        "php": ">=7.0.2",
+        "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
         "phpunit/phpunit": "4.8.*"
