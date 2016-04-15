@@ -46,6 +46,24 @@ $brl = $euros->to('BRL')->get();
 
 ?>
 
+```  
+
+It's also possible to get the rates of all currencies from a base currency.  
+
+```php  
+
+<?php 
+
+use Mateusjatenee\Currency;
+
+$currency = new Currency(10);
+
+$rates = $currency->all('USD');  
+
+$rates['BRL'] // returns the exchange rate for BRL
+
+
+?>
 ```
 
 #### Changelog
