@@ -8,7 +8,7 @@ class Currency
 {
 
     protected $value;
-    protected $base;
+    protected $from;
     protected $to;
     protected $convertion;
 
@@ -24,16 +24,16 @@ class Currency
         $this->value = $value;
     }
 
-    public function base($base = 'USD')
+    public function from($from = 'USD')
     {
-        $this->base = $base;
+        $this->from = $from;
         return $this;
     }
 
     public function to(string $to)
     {
         $this->to = $to;
-        $exchange = $this->exchange($this->value, $this->base, $this->to);
+        $exchange = $this->exchange($this->value, $this->from, $this->to);
 
         $this->value = $this->value * $exchange;
 
@@ -45,11 +45,11 @@ class Currency
         return $this->value;
     }
 
-    protected function exchange($value, $base, $to)
+    protected function exchange($value, $from, $to)
     {
         $guzzle = new Client();
 
-        $request = $guzzle->get($this->api, ['query' => ['base' => $base]]);
+        $request = $guzzle->get($this->api, ['query' => ['base' => $from]]);
 
         $request = json_decode($request->getBody(), true);
 

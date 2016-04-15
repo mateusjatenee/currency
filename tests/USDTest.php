@@ -10,7 +10,7 @@ class CurrencyTest extends PHPUnit
     {
         $currency = new Currency(10);
 
-        $euros = $currency->base('USD')->to('EUR')->get();
+        $euros = $currency->from('USD')->to('EUR')->get();
 
         $this->assertGreaterThan($euros, 10);
     }
