@@ -1,11 +1,14 @@
 Currency
 ================
-This is where your library description should go. Try to limit it to a paragraph or two.
+Simple lib that provides currency conversion using Yahoo! webservices.
 
 #### Installation via Composer
 ``` bash
 $ composer require mateusjatenee/currency
 ```
+
+#### Usage  
+
 
 #### Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information.
