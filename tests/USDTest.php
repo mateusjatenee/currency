@@ -1,7 +1,5 @@
 <?php
 
-namespace Mateusjatenee\Currency\Tests;
-
 use Mateusjatenee\Currency\Currency;
 use PHPUnit_Framework_TestCase as PHPUnit;
 
