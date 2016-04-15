@@ -3,7 +3,7 @@
 use Mateusjatenee\Currency\Currency;
 use PHPUnit_Framework_TestCase as PHPUnit;
 
-class CurrencyTest extends PHPUnit
+class USDTest extends PHPUnit
 {
     public function test10UsdReturnsEquivalentInEuros()
     {
