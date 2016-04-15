@@ -6,9 +6,8 @@ use GuzzleHttp\Client;
 
 class Currency
 {
-
     /**
-     * @var integer
+     * @var int
      */
     protected $value;
     /**
@@ -25,7 +24,7 @@ class Currency
     protected $api = 'http://api.fixer.io/latest';
 
     /**
-     * @param integer $value
+     * @param int $value
      */
     public function __construct($value)
     {
@@ -34,16 +33,19 @@ class Currency
 
     /**
      * @param string $from
+     *
      * @return $this
      */
     public function from($from = 'USD')
     {
         $this->from = $from;
+
         return $this;
     }
 
     /**
      * @param string $to
+     *
      * @return $this
      */
     public function to(string $to)
@@ -68,6 +70,7 @@ class Currency
      * @param $value
      * @param $from
      * @param $to
+     *
      * @return mixed
      */
     protected function exchange($value, $from, $to)

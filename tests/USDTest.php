@@ -5,7 +5,6 @@ use PHPUnit_Framework_TestCase as PHPUnit;
 
 class CurrencyTest extends PHPUnit
 {
-
     public function test10UsdReturnsEquivalentInEuros()
     {
         $currency = new Currency(10);
