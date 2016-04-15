@@ -32,8 +32,10 @@ class Currency
     }
 
     /**
-     * Returns all exchange rates
-     * @param  string $from
+     * Returns all exchange rates.
+     *
+     * @param string $from
+     *
      * @return array
      */
     public function all(string $from)
