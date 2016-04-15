@@ -81,6 +81,8 @@ class Currency
 
         $request = json_decode($request->getBody(), true);
 
+        $this->from = $to;
+
         return $request['rates'][$to];
     }
 }
