@@ -23,4 +23,13 @@ class CurrencyTest extends PHPUnit
 
         $this->assertGreaterThan($gbp, 10);
     }
+
+    public function test10UsdIsMoreThanItsEquivalentInBRL()
+    {
+        $currency = new Currency(10);
+
+        $brl = $currency->from('USD')->to('BRL')->get();
+
+        $this->assertLessThan($brl, 10);
+    }
 }
