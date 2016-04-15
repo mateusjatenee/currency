@@ -7,29 +7,45 @@ use GuzzleHttp\Client;
 class Currency
 {
 
+    /**
+     * @var integer
+     */
     protected $value;
+    /**
+     * @var string
+     */
     protected $from;
+    /**
+     * @var string
+     */
     protected $to;
-    protected $convertion;
-
+    /**
+     * @var string
+     */
     protected $api = 'http://api.fixer.io/latest';
 
     /**
-     * Initialize.
-     *
-     * @return void
+     * @param integer $value
      */
     public function __construct($value)
     {
         $this->value = $value;
     }
 
+    /**
+     * @param string $from
+     * @return $this
+     */
     public function from($from = 'USD')
     {
         $this->from = $from;
         return $this;
     }
 
+    /**
+     * @param string $to
+     * @return $this
+     */
     public function to(string $to)
     {
         $this->to = $to;
@@ -40,11 +56,20 @@ class Currency
         return $this;
     }
 
+    /**
+     * @return float
+     */
     public function get()
     {
         return $this->value;
     }
 
+    /**
+     * @param $value
+     * @param $from
+     * @param $to
+     * @return mixed
+     */
     protected function exchange($value, $from, $to)
     {
         $guzzle = new Client();
