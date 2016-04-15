@@ -32,6 +32,22 @@ class Currency
     }
 
     /**
+     * Returns all exchange rates
+     * @param  string $from
+     * @return array
+     */
+    public function all(string $from)
+    {
+        $guzzle = new Client();
+
+        $request = $guzzle->get($this->api, ['query' => ['base' => $from]]);
+
+        $request = json_decode($request->getBody(), true);
+
+        return $request['rates'];
+    }
+
+    /**
      * @param string $from
      *
      * @return $this
