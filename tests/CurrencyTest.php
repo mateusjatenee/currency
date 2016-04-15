@@ -11,7 +11,7 @@ class CurrencyTest extends PHPUnit
 
         $currency = $currency->all('USD');
 
-        $this->assertArrayHasKey('BRL');
-        $this->assertArrayNotHasKey('USD');
+        $this->assertArrayHasKey('BRL', $currency);
+        $this->assertArrayNotHasKey('USD', $currency);
     }
 }
