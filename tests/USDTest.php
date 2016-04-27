@@ -5,7 +5,8 @@ use PHPUnit_Framework_TestCase as PHPUnit;
 
 class USDTest extends PHPUnit
 {
-    public function test10UsdReturnsEquivalentInEuros()
+    /** @test */
+    public function ten_usd_should_return_equivalent_in_euros()
     {
         $currency = new Currency(10);
 
@@ -14,7 +15,8 @@ class USDTest extends PHPUnit
         $this->assertGreaterThan($euros, 10);
     }
 
-    public function test10UsdIsLessThanItsEquivalentInGbp()
+    /** @test */
+    public function ten_usd_should_be_less_than_its_equivalent_in_gbp()
     {
         $currency = new Currency(10);
 
@@ -23,7 +25,8 @@ class USDTest extends PHPUnit
         $this->assertGreaterThan($gbp, 10);
     }
 
-    public function test10UsdIsMoreThanItsEquivalentInBRL()
+    /** @test */
+    public function ten_usd_should_be_more_than_its_equivalent_in_brl()
     {
         $currency = new Currency(10);
 
