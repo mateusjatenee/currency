@@ -5,7 +5,8 @@ use PHPUnit_Framework_TestCase as PHPUnit;
 
 class CurrencyTest extends PHPUnit
 {
-    public function testAllMethodReturnsAnArray()
+    /** @test */
+    public function all_should_return_an_array()
     {
         $currency = new Currency(10);
 
